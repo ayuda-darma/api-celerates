@@ -27,7 +27,7 @@ const swaggerSpec = {
 
 // settings
 const app = express();
-const port = process.env.PORT || 9000;
+const port = process.env.PORT | 9000;
 
 // middlewares
 app.use(express.json());
