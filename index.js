@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
-const templateRoute = require("./routes/template");
+const templateRoute = require("./src/routes/template");
 const path = require("path");
 
 // swagger
