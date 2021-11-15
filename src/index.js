@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
-const templateRoute = require("./src/routes/template");
+const templateRoute = require("./routes/template");
 const path = require("path");
 
 // swagger
@@ -27,9 +27,7 @@ const swaggerSpec = {
 
 // settings
 const app = express();
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-  });
+const port = process.env.PORT | 9000;
 
 // middlewares
 app.use(express.json());
