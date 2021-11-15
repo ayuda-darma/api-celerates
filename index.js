@@ -27,7 +27,9 @@ const swaggerSpec = {
 
 // settings
 const app = express();
-const port = process.env.PORT | 9000;
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
 
 // middlewares
 app.use(express.json());
